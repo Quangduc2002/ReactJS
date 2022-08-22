@@ -4,7 +4,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="content ">
-        <div id="contact" className="tab-pane tab-pane1">
+        <div id="contact">
           <div className="about__title contact__title">
             <h1>
               GET <span>IN TOUCH</span>

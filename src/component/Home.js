@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Logo from "../../images/logo.jpg";
+import Logo from "./images/logo.jpg";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
     return (
       <div className="content ">
-        <div className="tab-pane home " style={{ height: "100%" }}>
+        <div className=" home " style={{ height: "100%" }}>
           <div className="img active" />
           <div id="home">
             <div className="content__image">
@@ -19,10 +19,6 @@ class Home extends Component {
                 <span class="blue">a</span>
                 <span class="blue">web</span>
                 <span class="blue">designer</span>
-                {/* <span className="visible1" />
-                                <span className="visible2" />
-                                <span className="visible3" />
-                                <span className="visible4" /> */}
               </h1>
               <p>
                 I'm a Freelance UI/UX Designer and Developer based . I strives

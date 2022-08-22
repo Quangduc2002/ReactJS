@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Logo from "../../images/logo.jpg";
+import Logo from "./images/logo.jpg";
 
 class About extends Component {
   render() {
     return (
       <div className="content ">
-        <div id="about" className="tab-pane tab-pane1">
+        <div id="about">
           <div className="about__title">
             <h1>
               ABOUT <span>ME</span>

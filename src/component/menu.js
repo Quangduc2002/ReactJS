@@ -20,6 +20,7 @@ const tabs = [
 function Menu() {
   const [show, setShow] = useState(false);
   const [type, setType] = useState("HOME");
+  console.log(type);
   return (
     <div className="menu c-3 ">
       <div

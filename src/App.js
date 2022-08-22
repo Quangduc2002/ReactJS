@@ -12,6 +12,8 @@ function App() {
 
       {/* chuyển tabs */}
       <Routes>
+        {/* path="*" sẽ hoạt động như một công cụ bắt tất cả cho bất kỳ URL không xác định nào */}
+        <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />

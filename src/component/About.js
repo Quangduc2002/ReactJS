@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "./images/logo.jpg";
+import LOGO from "./images/logo.jpg";
 
 class About extends Component {
   render() {
@@ -14,7 +14,7 @@ class About extends Component {
           </div>
           <div className="about__content">
             <div className="about__image ">
-              <img src={Logo} alt="" />
+              <img src={LOGO} alt="" />
             </div>
             <div className="about__self1 ">
               <div className>

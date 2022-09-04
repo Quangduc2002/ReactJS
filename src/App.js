@@ -10,8 +10,6 @@ function App() {
     <div className="main">
       <Menu />
 
-      <Home />
-
       {/* chuyển tabs */}
       <Routes>
         {/* path="*" sẽ hoạt động như một công cụ bắt tất cả cho bất kỳ URL không xác định nào */}

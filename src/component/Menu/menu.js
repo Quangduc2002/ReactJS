@@ -1,5 +1,7 @@
 import { useState } from "react";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
+import styles from "./Menu.module.css";
 const tabs = [
   {
     name: "HOME",
@@ -21,24 +23,24 @@ function Menu() {
   const [show, setShow] = useState(false);
   const [type, setType] = useState("HOME");
   return (
-    <div className="menu c-3 ">
+    <div className={clsx(styles.menu, "c-3")}>
       <div
         onClick={() => {
           setShow(!show);
         }}
-        className="menu__bar js-bars"
+        className={clsx(styles.bar)}
       >
-        <i className="fa-solid fa-bars" />
+        <i className={clsx("fa-solid", "fa-bars")} />
       </div>
       {show && (
-        <ul className="menu__ul js-menu">
+        <ul className={clsx(styles.ul)}>
           <li
             onClick={() => {
               setShow(!show);
             }}
-            className="menu__li js-close close"
+            className={clsx(styles.li)}
           >
-            <i className="fa-solid fa-xmark" />
+            <i className={clsx("fa-solid", "fa-xmark")} />
           </li>
 
           {tabs.map((e) => (
@@ -54,7 +56,7 @@ function Menu() {
                     }
                   : {}
               }
-              className="menu__link"
+              className={clsx(styles.link)}
               to={e.href}
             >
               <i
@@ -88,7 +90,7 @@ function Menu() {
           onClick={() => {
             setShow(!show);
           }}
-          className="model js-model"
+          className={clsx(styles.model)}
         />
       )}
     </div>

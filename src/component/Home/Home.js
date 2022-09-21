@@ -5,10 +5,10 @@ import styles from "./Home.module.css";
 
 function Home() {
   return (
-    <div className="content ">
-      <div className={clsx("home")} style={{ height: "100%" }}>
+    <div className={clsx(styles.content)}>
+      <div className={clsx(styles.home)} style={{ height: "100%" }}>
         <div className={clsx(styles.img)} />
-        <div id={clsx("home")}>
+        <div id={clsx(styles.home)}>
           <div className={clsx(styles.image)}>
             <div className={clsx(styles.image_img)} />
           </div>
@@ -34,7 +34,10 @@ function Home() {
                 )}
               >
                 <Link to={"/About"}>
-                  <i style={{ color: "#fff" }} className="fa-solid fa-user" />
+                  <i
+                    style={{ color: "#fff" }}
+                    className={clsx(styles.solid, "fa-solid fa-user")}
+                  />
                   <span style={{ color: "#fff" }}>more about me</span>
                 </Link>
               </button>
@@ -45,11 +48,18 @@ function Home() {
                   styles.link_home,
                   styles.button__link1,
                   styles.link1,
-                  "l-0"
+                  styles.l_0
                 )}
               >
                 <Link to={"/Contact"}>
-                  <i className={clsx(styles.i, "fa-solid", "fa-comments")} />
+                  <i
+                    className={clsx(
+                      styles.solid,
+                      styles.i,
+                      "fa-solid",
+                      "fa-comments"
+                    )}
+                  />
                   <span className={clsx(styles.span)}>contact</span>
                 </Link>
               </button>

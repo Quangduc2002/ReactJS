@@ -2,35 +2,37 @@ import { useState } from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import styles from "./Menu.module.css";
-const tabs = [
-  {
-    name: "HOME",
-    icon: "fa-solid fa-house-chimney",
-    href: "/",
-  },
-  {
-    name: "ABOUT",
-    icon: "fa-solid fa-user",
-    href: "/About",
-  },
-  {
-    name: "CONTACT",
-    icon: "fa-solid fa-comments",
-    href: "/Contact",
-  },
-];
 function Menu() {
+  const tabs = [
+    {
+      name: "HOME",
+      icon: "fa-solid fa-house-chimney",
+      href: "/",
+    },
+    {
+      name: "ABOUT",
+      icon: "fa-solid fa-user",
+      href: "/About",
+    },
+    {
+      name: "CONTACT",
+      icon: "fa-solid fa-comments",
+      href: "/Contact",
+    },
+  ];
   const [show, setShow] = useState(false);
   const [type, setType] = useState("HOME");
   return (
-    <div className={clsx(styles.menu, "c-3")}>
+    <div className={clsx(styles.menu, styles.c_3)}>
       <div
         onClick={() => {
           setShow(!show);
         }}
         className={clsx(styles.bar)}
       >
-        <i className={clsx("fa-solid", "fa-bars")} />
+        <i
+          className={clsx(styles.fa_bars, styles.fa_solid, "fa-solid fa-bars")}
+        />
       </div>
       {show && (
         <ul className={clsx(styles.ul)}>
@@ -40,7 +42,13 @@ function Menu() {
             }}
             className={clsx(styles.li)}
           >
-            <i className={clsx("fa-solid", "fa-xmark")} />
+            <i
+              className={clsx(
+                styles.fa_xmark,
+                styles.fa_solid,
+                "fa-solid fa-xmark"
+              )}
+            />
           </li>
 
           {tabs.map((e) => (
@@ -68,7 +76,7 @@ function Menu() {
                       }
                     : {}
                 }
-                className={e.icon}
+                className={clsx(styles.fa_solid, e.icon)}
               />
               <span
                 style={

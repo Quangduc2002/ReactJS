@@ -5,11 +5,12 @@ import Home from "./component/Home/Home";
 import About from "./component/About/About";
 import Contact from "./component/Contact/Contact";
 import GlobalStyles from "./component/GlobalStyles";
+import clsx from "clsx";
 
 function App() {
   return (
     <GlobalStyles>
-      <div className="main">
+      <div className={clsx("main")}>
         <Menu />
 
         {/* chuyển tabs */}

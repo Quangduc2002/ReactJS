@@ -5,8 +5,8 @@ import styles from "./About.module.css";
 class About extends Component {
   render() {
     return (
-      <div className={clsx("content")}>
-        <div id={clsx("about")}>
+      <div className={clsx(styles.content)}>
+        <div id={clsx(styles.about)}>
           <div className={clsx(styles.title)}>
             <h1>
               ABOUT <span>ME</span>
@@ -21,7 +21,7 @@ class About extends Component {
               <div className>
                 <div className={clsx(styles.self2)}>
                   <div>
-                    <ul class="about__self-ul">
+                    <ul class={clsx(styles.self_ul)}>
                       <li className={clsx(styles.self_li)}>
                         <p>Full Name:</p> Phạm Quang Đức
                       </li>
@@ -36,8 +36,8 @@ class About extends Component {
                       </li>
                     </ul>
                   </div>
-                  <div className={clsx(styles.self, "col-xl-6 col-md-5")}>
-                    <ul className="about__self-ul">
+                  <div className={clsx(styles.self)}>
+                    <ul className={clsx(styles.self_ul)}>
                       <li className={clsx(styles.self_li, styles.self__li)}>
                         <p>Freelance:</p> Available
                       </li>
@@ -57,7 +57,7 @@ class About extends Component {
                   <button className={clsx(styles.link)}>
                     <i
                       style={{ color: "#fff" }}
-                      className={clsx("fa-solid fa-download")}
+                      className={clsx(styles.fa_solid, "fa-solid fa-download")}
                     />
                     <span style={{ color: "#fff" }}>download my cv</span>
                   </button>

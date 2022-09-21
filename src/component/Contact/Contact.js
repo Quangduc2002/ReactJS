@@ -12,9 +12,9 @@ function Contact() {
     console.log(data);
   };
   return (
-    <div className="content ">
-      <div id="contact">
-        <div className="about__title contact__title">
+    <div className={clsx(styles.content)}>
+      <div id={styles.contact}>
+        <div className={clsx(styles.about__title, styles.title)}>
           <h1>
             GET <span>IN TOUCH</span>
           </h1>
@@ -23,7 +23,7 @@ function Contact() {
           </p>
         </div>
         <div className={clsx(styles.container)}>
-          <div className={clsx(styles.left, "c-3 m-12")}>
+          <div className={clsx(styles.left, styles.c_3, styles.m_12)}>
             <ul className={clsx(styles.ul)}>
               <li className={clsx(styles.li)}>
                 <p>Phone</p>
@@ -70,7 +70,9 @@ function Contact() {
               </li>
             </ul>
           </div>
-          <div className={clsx(styles.form, "c-9 m-12 s-12")}>
+          <div
+            className={clsx(styles.form, styles.c_9, styles.m_12, styles.s_12)}
+          >
             <p className={clsx(styles.form_title)}>
               If you have any suggestion, project or even you want to say
               Hello... please fill out the form below and I will reply you
@@ -78,12 +80,20 @@ function Contact() {
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className={clsx("auth__form")}
+              className={clsx(styles.auth__form)}
               id={clsx("form")}
             >
-              <div className="auth-form__froup">
-                <div className="auth-form__froup1 c-5 s-12">
-                  <i className="fa-solid fa-user auth-form-icon" />
+              <div className={clsx(styles.auth_form__froup)}>
+                <div
+                  className={clsx(
+                    styles.auth_form__froup1,
+                    styles.c_5,
+                    styles.s_12
+                  )}
+                >
+                  <i
+                    className={clsx(styles.auth_form__icon, "fa-solid fa-user")}
+                  />
                   <input
                     id="name"
                     name="name"
@@ -102,8 +112,14 @@ function Contact() {
                     </div>
                   )}
                 </div>
-                <div className="auth-form__froup1 c-5 s-12">
-                  <i className="ti-email auth-form-icon" />
+                <div
+                  className={clsx(
+                    styles.auth_form__froup1,
+                    styles.c_5,
+                    styles.s_12
+                  )}
+                >
+                  <i className={clsx(styles.auth_form__icon, "ti-email")} />
                   <input
                     id="email"
                     name="email"
@@ -131,8 +147,14 @@ function Contact() {
                   )}
                 </div>
               </div>
-              <div className="auth-form__froup1">
-                <i className="fa-solid fa-comments comments" />
+              <div className={clsx(styles.auth_form__froup1)}>
+                <i
+                  className={clsx(
+                    styles.comments,
+                    styles.fa_solid,
+                    "fa-solid fa-comments"
+                  )}
+                />
                 <textarea
                   id="comment"
                   name="comment"
@@ -154,7 +176,9 @@ function Contact() {
               </div>
               <div>
                 <button className={clsx(styles.link)}>
-                  <i className={clsx("fa-solid fa-paper-plane")} />
+                  <i
+                    className={clsx(styles.solid, "fa-solid fa-paper-plane")}
+                  />
                   <span style={{ color: "#fff" }}> Send Message</span>
                 </button>
               </div>

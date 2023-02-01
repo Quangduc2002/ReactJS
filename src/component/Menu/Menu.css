@@ -1,0 +1,8 @@
+.active i,
+.active span {
+  color: #2196f3;
+}
+
+.active i {
+  border-right: 4px solid #2196f3;
+}

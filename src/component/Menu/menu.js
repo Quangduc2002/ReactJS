@@ -1,7 +1,8 @@
 import { useState } from "react";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Menu.module.css";
+import "./Menu.css";
 function Menu() {
   const tabs = [
     {
@@ -21,7 +22,6 @@ function Menu() {
     },
   ];
   const [show, setShow] = useState(false);
-  const [type, setType] = useState("HOME");
   return (
     <div className={clsx(styles.menu, styles.c_3)}>
       <div
@@ -52,44 +52,26 @@ function Menu() {
           </li>
 
           {tabs.map((e) => (
-            <Link
+            <NavLink
               onClick={() => {
-                setType(e.name);
                 setShow(!show);
               }}
-              style={
-                type === e.name
-                  ? {
-                      color: "#2196f3",
-                    }
-                  : {}
-              }
               className={clsx(styles.link)}
               to={e.href}
             >
-              <i
-                style={
-                  type === e.name
-                    ? {
-                        color: "#2196f3",
-                        borderRight: "4px solid #2196f3",
-                      }
-                    : {}
-                }
-                className={clsx(styles.fa_solid, e.icon)}
-              />
+              <i className={clsx(styles.fa_solid, e.icon)} />
               <span
-                style={
-                  type === e.name
-                    ? {
-                        color: "#2196f3",
-                      }
-                    : {}
-                }
+              // style={
+              //   type === e.name
+              //     ? {
+              //         color: "#2196f3",
+              //       }
+              //     : {}
+              // }
               >
                 {e.name}
               </span>
-            </Link>
+            </NavLink>
           ))}
         </ul>
       )}

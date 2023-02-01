@@ -21,7 +21,7 @@ class About extends Component {
               <div className>
                 <div className={clsx(styles.self2)}>
                   <div>
-                    <ul class={clsx(styles.self_ul)}>
+                    <ul className={clsx(styles.self_ul)}>
                       <li className={clsx(styles.self_li)}>
                         <p>Full Name:</p> Phạm Quang Đức
                       </li>

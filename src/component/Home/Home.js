@@ -16,9 +16,9 @@ function Home() {
             <h3>Hi there !</h3>
             <h1>
               I'm
-              <span class={clsx(styles.blue)}>a</span>
-              <span class={clsx(styles.blue)}>web</span>
-              <span class={clsx(styles.blue)}>designer</span>
+              <span className={clsx(styles.blue)}>a</span>
+              <span className={clsx(styles.blue)}>web</span>
+              <span className={clsx(styles.blue)}>designer</span>
             </h1>
             <p>
               I'm a Freelance UI/UX Designer and Developer based . I strives to

@@ -55,11 +55,17 @@ class About extends Component {
                 </div>
                 <div>
                   <button className={clsx(styles.link)}>
-                    <i
+                    {/* <i
                       style={{ color: "#fff" }}
                       className={clsx(styles.fa_solid, "fa-solid fa-download")}
-                    />
-                    <span style={{ color: "#fff" }}>download my cv</span>
+                    /> */}
+                    <a
+                      className={clsx(styles.content_link)}
+                      href="https://drive.google.com/file/d/1unqNBaNyVKlKR5bj8L1ZBDBRafh-c0e6/view"
+                      style={{ padding: "14px 20px" }}
+                    >
+                      <span style={{ color: "#fff" }}>my cv</span>
+                    </a>
                   </button>
                 </div>
               </div>
